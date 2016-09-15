@@ -1,0 +1,251 @@
+// Give the navigation some padding
+.nav {
+  margin: 10px 0;
+  
+  // Style the active links
+  a.active {
+    font-weight: bold;
+  }
+}
+
+#navBar{
+  display: none;
+}
+
+.navbar-nav{
+  height: auto;
+}
+
+.titleContactsList{
+  position: absolute;
+  padding-top: 4px;
+  height: 30px;
+  background-color: #ccc;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #6E6E6E;
+}
+
+.contactsListContainer{
+  padding-left: 0px;
+  overflow: scroll;
+  padding-top: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.searchButton {
+    width: 115px;
+    height: 37px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #FFF!important;
+    background-color: #272628!important;
+    border-radius: 0;
+}
+
+.titleCoversation{
+  position: absolute;
+  padding-top: 4px;
+  height: 30px;
+  background-color: #ccc;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #6E6E6E;
+}
+
+.sendMessageContainer{
+  height: 60px;
+  padding-top: 15px;
+  background-color: #ccc;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+.messagesHistoryContainer{
+  overflow: scroll;
+  padding-top: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.messagesContainer{
+  background-color: #F0F8FF;
+  padding-bottom: 40px;
+  height: 100vh;
+}
+
+.contactsContainer{
+  background-color: #F2F2F2;
+  padding-bottom: 10px;
+  height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-right: 1px solid #6E6E6E;
+}
+
+.messagesList{
+  width:100%;
+  padding:20px;
+}
+
+.messageEl{
+  width:100%;
+  position: relative;
+  list-style-type:none;
+  display: inline-table;
+}
+
+.inputMessage{
+  width: 100% !important;
+}
+
+.btnSendMessage{
+  width: 100%;
+}
+
+.tailContainer:before{
+  content: '';
+}
+
+.tailWrapContainerMine{
+  background-color: #dcf8c6;
+}
+
+.tailWrapContainerPeople{
+  background-color: #dcf8c6;
+}
+
+.tailContainerMine{
+  content: '';
+  position: absolute;
+  width: 12px;
+  bottom: 0px;
+  height: 19px;
+  right: -12px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAD2UExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRsXAAAANzwzNPmxNrtyau5oIWRedDkwNntyczgwdfpyJ+/n97wzsLWtNjsytvwzczfvtPmxau6nNjqxtrtyio1KtzwzNjryAAAANzwzgAAANzwzK7Aor/Us9Lnw8vevAAAAMzevtbpxrvMrX+IdwAAAEROOi45Lr3MrZGjf9LoxX+MctnqydLkwhgYGMzfv9vuyQAAANzwzNvuy9zxy7vMu7XGqNvtzKKykwAAANruzKq6nLnMriQkGMXXuL3PsNjsySgzKAAAANLkw83fvd3vy9z4xtzwzRpFmIEAAABQdFJOUwAXChEGBAMBAgwhDvJ7k0YqMc0Zmwj6apf2kjU0+dkw/swh/CP9j2Wr2gndvaYeBRoxQg6gUPt/FaHJGdTj9A9k7XQLeE6iFcN12xkSt9r4NKizowAAAMFJREFUKM+V0sdywlAMBVDbMX7PQCihQ+iQ0HsJvfem/P/PwBIzugu0PXNnNNJVyPmhsIPhhoB2COwIGuLdhAcl3AhCBoBoHUC6BCBbA0C/EkBFB5D/FjxQwQYg1RI8UKINgDoSAPUlAPqUAMgfAEBfXsEDBV0+Hogi4Zhg4THj9YwHoqEBYOrgYTI3GVgMNn8r+Qq94k9yZNosW/3Hy9VuTjWfHkOX6367bGZUU7de66ieHZrO1OGg8Z1WTgYAFLgD5S1PCkzo1B0AAAAASUVORK5CYII=)
+}
+
+.tailBottom{
+  bottom: 0px;
+}
+
+.sentMessage{
+  margin-left: 5px;
+}
+
+.seenMessage{
+  margin-left: -12px;
+}
+
+.messageDetails{
+  height: 36px;
+  padding: 5px
+}
+
+.messgaeText{
+  padding: 5px;
+}
+
+.lineMessage{
+  margin: 1px 0 5px 0 !important;
+  border-top: 1px solid #fff;
+}
+
+.tailContainerPeople{
+  content: '';
+    position: absolute;
+    left: -11px;
+    bottom: 30px;
+    width: 12px;
+    height: 19px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAYAAADeB1slAAABP2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iL1VzZXJzL3poZW5jaGFvL0Rvd25sb2Fkcy9tc2ctaW4ucG5nIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+K85lwgAAAYRpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG/S0JRFMc/aWGU0ZBDQ5CDNIRGWUhtpYQVImIF9mPR569A7fGeEtHY0Org0A9akmhpri36B4IgqKYIWqOhoCXidZ4GSuS53Hs/93vPOffec8ESyyl5vX0U8oWiFg36nbGVVaftGYu0NvoZjCu6OhOJhGhpn/fiKXbnMXO19vvXupMpXYG2TuFpRdWKwnPC4a2iavK+sEPJxpPC58JuTS4o/GjqiTq/mpypscXM6dCWogFhh7Az08SJJlayWl54QtiVz5WU3/uYL7GnCsuLpi59AJ0oQfw4mWeWAD7GmJLRhwcvI7KiRby3Fh9mU2IVGVW20dggQ5YiblFLkj0lc1r0lLSceIiZf/C3tnp63Fs/wb4AHS+G8TEMtiP43jOMrxPD+K6CVepyXWnEb1Zg8k30ckNzHUPvLlxcNbTEKVyWof9JjWvxmmSVbkmn4f0Melag7xa61up1+92n+gBLOxC6gYNDGBL/3vUftaVnFhC3kmwAAAAJcEhZcwAACxMAAAsTAQCanBgAAAFpSURBVEiJtdexahRRFMbx367BhEgEGxUiIhYigmCxFrGxUgublCYggiA2KS0EsQs+g4g+iL2VfJWtjZIniJ1NYrGzMMSd7G52zmlmzrnnfn/OuXfuZQaKLMkxDKsAEysBJFktBWC9GrBRDfhbDShfgwvVgOvVgFvVgDvVgIeTl0Hfykmu4WDiV1TwtO1UAF60nV5blOQ+vrdjfVfw/mSgtwqSPMbXEkCSDfzAjZNjS7coyQCfpon3AsAHPOsaXAqQZB9vT8s50xokWTNuy/NZuQsDmr3+BXfnyZ8b0Jwx7/AK5+adNxOQZAsvjduxOiN9PkCSS9jDLm4vKtq2lY74N61LYxn7r4IkF3HYhzhTvoPRaPQHn3FUAmjsNa5gH79wfFbAqbsoyRDnG9geto3PnK61WwzQAVvHFnbwAJtNfDnAFOBKI7yGq3iCe7iJy/iNR31eOEPj1k2eR/jZl34X9E31L9THYn3+AWdPTBSMp7C3AAAAAElFTkSuQmCC");
+}
+
+.myMessage{
+  background-color: #dcf8c6;
+  border-radius: 2px;
+  float: right;
+}
+
+.peopleMessage{
+  background-color: #D8D8D8;
+  border-radius: 2px;
+  float: left;
+}
+
+.contactNameText{
+  position: absolute;
+  margin-left: 30px;
+}
+
+.logout{
+  float: right;
+  font-size: 20px;
+  margin-top: -4px;
+}
+
+.logoutInWelcome{
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.defaultChatMessageCont{
+  width:100%;
+  height:100%;
+  padding-top: 30px;
+  background-color:#ccc;
+  position:absolute;
+  z-index:200;
+}
+
+.defaultChatText{
+  font-size: 5vw;
+  text-align: center;
+}
+
+.badgeNewMessages{
+  float: right;
+  margin-top: 1px;
+}
+
+.contactsStatus{
+  position: absolute;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+}
+
+.contactListEl{
+  height: 50px;
+  background-color: #D8D8D8;
+  border-bottom: 1px solid #A4A4A4;
+  list-style-type:none;
+  padding: 15px 5px 5px 5px;
+}
+
+.contactElActive{
+  background-color: darkgray;
+}
+
+.statusUnknown{
+  background-color: #ccc;
+}
+
+.statusOnline{
+  background-color: #00FF40;
+}
+
+.statusOffline{
+  background-color: #FF0000;
+}
+

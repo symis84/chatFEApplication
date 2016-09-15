@@ -1,0 +1,87 @@
+.formRegisterLogin {
+    background-color: #FAFAFA;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 5px 10px -4px #A4A4A4;
+}
+
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 40px 0;
+}
+
+
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.tab-group > li a {
+  display:block;
+  text-decoration:none;
+  padding:15px;
+  background-color:#a0b3b0;
+  color:#fff;
+  font-size:20px;
+  float:left;
+  width:50%;
+  text-align:center;
+  cursor:pointer;
+  transition:0.5s ease;
+}
+
+.tab-group > li a:hover {
+  background-color:#109F79;
+  color:#fff;
+    
+}
+
+.tab-group .active a {
+    background:#1ab188;
+    color:#fff;
+}
+
+.titleSignUp{
+  text-align:center;
+  color:#6E6E6E;
+  font-size: 28px;
+  font-weight:200;
+  margin:0 0 40px;
+}
+
+.buttonRegisterLogin {
+  border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+  font-size:2rem;
+  font-weight:400;
+  margin-top: 40px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background-color:#1ab188;
+  color: #fff;
+  
+}
+
+.buttonRegisterLogin:hover{
+  background:#109F79;
+}
+
+.buttonRegisterLogin:focus {
+  background:#109F79;
+}
+
+.button-block {
+  display:block;
+  width:100%;
+}
+
+.inputText{
+  border-radius: 0px ;
+}

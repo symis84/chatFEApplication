@@ -1,0 +1,72 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 contactsContainer">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 titleContactsList">
+                Contacts List
+            </div>
+            <ul class="contactsListContainer">
+                <li class="contactListEl" ng-if="contact.username != myUserName" ng-class="{'contactElActive' : toggleObject.item == $index}" ng-repeat="contact in contactsList" ng-click="loadConversation($index,contact.username)">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="contactsStatus" ng-class="{ 'statusUnknown': contact.status=='unknown', 'statusOnline': contact.status=='online', 'statusOffline': contact.status=='offline' }"></div>
+                        <div class="contactNameText">{{contact.username}}</div>
+                        <div ng-if="contact.newMessages > 0" class="badge badgeNewMessages">{{contact.newMessages}}</div>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 messagesContainer">
+            <div ng-if="conversationId == undefined" class="row defaultChatMessageCont"><span class="logout logoutInWelcome" ng-click="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></span><div class="defaultChatText">Hello&nbsp;{{myUserName}}</div></div>
+            <div class="row titleCoversation">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    {{conversationPeer}}
+                    <span class="logout" ng-click="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                </div>
+            </div>
+            <div id="historyContainer" class="row messagesHistoryContainer">
+                <ul class="messagesList">
+                    <li class="messageEl" ng-repeat="message in messagesList">
+                        <div ng-class="{ 'tailWrapContainerMine': message.from==myUserName, 'tailWrapContainerPeople': message.from!=myUserName }">
+                            <span ng-class="{ 'tailContainerMine': message.from==myUserName, 'tailContainerPeople': message.from!=myUserName, tailBottom: message.from=='me' &&  message.like==false }"></span>
+                        </div>
+                        <span ng-class="{ 'myMessage': message.from==myUserName, 'peopleMessage': message.from!=myUserName }">
+                            <span class="messgaeText">
+                                {{message.content}}
+                                <i ng-if="message.seen" class="fa fa-check sentMessage" aria-hidden="true"></i>
+                                <!--<i ng-if="message.seen==true" class="fa fa-check seenMessage" aria-hidden="true"></i>-->
+                            </span>
+                            <div ng-if="message.from!=myUserName" class="messageDetails">
+                                <hr class="lineMessage">
+                                <i ng-if="message.likedBy.length>0"  class="fa fa-thumbs-up" aria-hidden="true" ng-click="setUnLike($index,false)"></i>
+                                <span ng-if="message.likedBy.length>0">you like it</span>
+                                <i ng-if="message.likedBy.length==0" class="fa fa-thumbs-o-up" aria-hidden="true" ng-click="setLike($index,true)"></i>
+                            </div>
+                            <div ng-if="message.from==myUserName && message.likedBy.length>0" class="messageDetails">
+                                <hr class="lineMessage">
+                                <i ng-if="message.likedBy.length>0"  class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                <span ng-if="message.likedBy.length>0">{{conversationPeer}} likes it</span>
+                            </div>
+                        </span>
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="row sendMessageContainer">
+                
+                    <form class="form-inline">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 form-group">
+                            <input type="text" class="form-control inputMessage" placeholder="Type a message" ng-model="myNewMessage">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <button type="submit" class="btn btn-default btnSendMessage" ng-click="sendMyNewMessage(myNewMessage)"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

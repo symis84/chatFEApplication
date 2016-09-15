@@ -1,0 +1,34 @@
+<div class="formRegisterLogin">
+	<ul class="tab-group">
+        <li class="tab" ng-class="{'active':signUpToogleStatus}"><a ng-click="signUpToogle(true)">Sign Up</a></li>
+        <li class="tab" ng-class="{'active':!signUpToogleStatus}"><a ng-click="signUpToogle(false)">Log In</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div>   
+         	<div class="titleSignUp">{{message}}</div>
+      		<form>
+      			<div class="form-group" ng-class="{'has-error': username.error, 'has-feedback': username.error}">
+				  <label class="control-label" for="inputSuccess2" ng-if="username.error">Error</label>
+				  <input type="text" class="form-control inputText" id="inputSuccess2" ng-model="username.val" placeholder="username" aria-describedby="inputSuccess2Status">
+				  <span class="glyphicon form-control-feedback" aria-hidden="true" ng-class="{'glyphicon-remove': username.error}"></span>
+				  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+				</div>
+				<div class="form-group" ng-class="{'has-error': password.error, 'has-feedback': password.error}">
+				  <label class="control-label" ng-if="password.error" for="inputSuccess2">Error</label>
+				  <input type="text" class="form-control inputText" placeholder="password" ng-model="password.val" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+				  <span class="glyphicon form-control-feedback" aria-hidden="true" ng-class="{'glyphicon-remove': password.error}"></span>
+				  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+				</div>
+      			<button type="submit" ng-if="signUpToogleStatus" class="buttonRegisterLogin button-block" ng-click="registerLogin(username.val,password.val,'register')">Get Started</button>
+      			<button type="submit" ng-if="!signUpToogleStatus" class="buttonRegisterLogin button-block" ng-click="registerLogin(username.val,password.val,'login')">Log In</button>
+      		</form>
+        </div>
+
+    
+        
+        
+        
+      </div>
+
+</form>
